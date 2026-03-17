@@ -8,12 +8,12 @@ import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
 const images = [
-  { src: hero1, alt: "Community empowerment event" },
-  { src: hero2, alt: "Students in classroom" },
-  { src: hero3, alt: "Vocational training workshop" },
-  { src: hero1, alt: "Youth celebration" },
-  { src: hero2, alt: "Education outreach" },
-  { src: hero3, alt: "Skills training program" },
+  { src: hero1, alt: "Health outreach in the community" },
+  { src: hero2, alt: "Community health education session" },
+  { src: hero3, alt: "Medical awareness campaign" },
+  { src: hero1, alt: "Volunteers distributing health materials" },
+  { src: hero2, alt: "Maternal health support program" },
+  { src: hero3, alt: "Rural health education drive" },
 ];
 
 const Gallery = () => {
@@ -21,7 +21,7 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <PageHero title="Gallery" subtitle="Capturing moments of impact and transformation." />
+      <PageHero title="Gallery" subtitle="Capturing moments of health impact and community transformation." />
 
       <section className="section-padding">
         <div className="container-narrow">
