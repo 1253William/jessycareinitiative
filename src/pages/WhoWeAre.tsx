@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
-import { Heart, Eye, Star, Shield, Target, Globe } from "lucide-react";
+import { Heart, Shield, Scale, Target, Handshake } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import SectionHeading from "@/components/shared/SectionHeading";
 import hero2 from "@/assets/hero-2.jpg";
 
 const values = [
-  { icon: Heart, title: "Compassion", desc: "We serve with empathy and genuine care for every individual." },
-  { icon: Star, title: "Excellence", desc: "We strive for the highest standards in everything we do." },
-  { icon: Shield, title: "Integrity", desc: "We operate with transparency and accountability." },
-  { icon: Target, title: "Impact", desc: "We measure success by the lives we transform." },
-  { icon: Globe, title: "Inclusivity", desc: "We embrace diversity and serve all communities equally." },
-  { icon: Eye, title: "Innovation", desc: "We seek creative solutions to complex social challenges." },
+  { icon: Heart, title: "Compassion", desc: "We serve with empathy, kindness, and a genuine commitment to improving lives." },
+  { icon: Shield, title: "Integrity", desc: "We uphold honesty, transparency, and accountability in all our actions." },
+  { icon: Scale, title: "Equity", desc: "We believe everyone deserves equal access to quality health information and care, regardless of background." },
+  { icon: Target, title: "Impact", desc: "We are driven by results and committed to creating meaningful, lasting change in communities." },
+  { icon: Handshake, title: "Collaboration", desc: "We believe in partnerships and teamwork to maximize impact." },
 ];
 
 const WhoWeAre = () => (
@@ -21,7 +20,7 @@ const WhoWeAre = () => (
     {/* Story */}
     <section className="section-padding">
       <div className="container-narrow max-w-4xl">
-        <SectionHeading label="Our Story" title="A Foundation Built on Hope" />
+        <SectionHeading label="Our Story" title="A Purpose-Driven Initiative" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,14 +28,14 @@ const WhoWeAre = () => (
           className="prose prose-lg max-w-none text-muted-foreground space-y-4"
         >
           <p>
-            Jessy Care Foundation was born out of a deep desire to address the challenges facing young people in Ghana.
-            Founded with the belief that every young person deserves access to quality education, skills training, and
-            opportunities for growth, we have been working tirelessly to create pathways for success.
+            JessyCare Impact Initiative is a purpose-driven organization focused on improving health outcomes
+            through education, awareness, and community-driven programs. We were founded with the belief that
+            no one should be limited by lack of access to health knowledge or care.
           </p>
           <p>
-            Our journey began in a small community where we witnessed firsthand the potential of young people held back
-            by limited resources. Today, we operate across multiple regions in Ghana, reaching hundreds of beneficiaries
-            through our comprehensive programs.
+            Our journey began in communities where we witnessed firsthand the devastating effects of health
+            misinformation and limited access to care. Today, we operate across multiple regions in Ghana,
+            reaching hundreds of families through comprehensive health education and outreach programs.
           </p>
         </motion.div>
       </div>
@@ -54,8 +53,9 @@ const WhoWeAre = () => (
           >
             <h3 className="font-heading text-2xl font-bold mb-4 gradient-text">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To empower young people through education, vocational training, entrepreneurship,
-              and community development initiatives that create sustainable change.
+              At JessyCare Impact Initiative, we strive to bridge the health gap both in underserved cities and
+              villages. We work to reach communities with life-changing health education, empowering practical
+              awareness, and sustainable initiatives that uplift individuals and families — ensuring no one is left behind.
             </p>
           </motion.div>
           <motion.div
@@ -66,8 +66,8 @@ const WhoWeAre = () => (
           >
             <h3 className="font-heading text-2xl font-bold mb-4 gradient-text">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To empower 100,000 young leaders in Africa by 2030, creating a generation of
-              self-sufficient, skilled, and empowered individuals who drive positive change.
+              To create a world where no one is limited by lack of access to health knowledge or care,
+              and every individual has the chance to live a healthy, dignified life.
             </p>
           </motion.div>
         </div>

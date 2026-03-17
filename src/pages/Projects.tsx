@@ -7,34 +7,34 @@ import hero1 from "@/assets/hero-1.jpg";
 
 const ongoing = [
   {
-    title: "Vocational Training Initiative",
-    desc: "Equipping youth with practical skills in carpentry, tailoring, welding, and hairdressing across three major cities in Ghana.",
+    title: "Community Health Education Program",
+    desc: "Bringing essential health knowledge to underserved cities and villages — covering disease prevention, nutrition, hygiene, and maternal health.",
     locations: ["Accra", "Kumasi", "Tamale"],
-    impact: "2,000+ trained",
+    impact: "2,000+ educated",
   },
   {
-    title: "Entrepreneurship & Mentorship Workshop",
-    desc: "Comprehensive business training, mentorship pairing, and startup incubation for aspiring young entrepreneurs.",
+    title: "Health Awareness & Outreach Campaign",
+    desc: "Empowering communities with practical health awareness, preventive care knowledge, and connecting families to healthcare resources.",
     locations: ["Greater Accra Region"],
-    impact: "100+ startups launched",
+    impact: "500+ families reached",
   },
   {
-    title: "Community Education Outreach",
-    desc: "Bringing quality educational resources and tutoring to underserved communities across Northern Ghana.",
+    title: "Maternal & Child Health Initiative",
+    desc: "Improving maternal and child health outcomes through education, prenatal support, and community health worker training.",
     locations: ["Northern Ghana"],
-    impact: "500+ students supported",
+    impact: "300+ mothers supported",
   },
 ];
 
 const completed = [
-  { title: "Youth Empowerment Seminars", impact: "5,000 young people reached", desc: "A series of motivational and skills-building seminars held across multiple regions." },
-  { title: "Community Library Initiative", impact: "5 libraries built", desc: "Establishing community libraries to provide access to books and digital learning resources." },
-  { title: "Digital Literacy Workshop", impact: "1,000 students trained", desc: "Teaching basic and advanced digital skills to students in underserved schools." },
+  { title: "Health Awareness Seminars", impact: "5,000 community members reached", desc: "A series of health education and awareness seminars held across multiple regions addressing key health challenges." },
+  { title: "Community Health Resource Centers", impact: "5 centers established", desc: "Establishing community health resource centers to provide access to health information and basic screening services." },
+  { title: "Digital Health Literacy Workshop", impact: "1,000 participants trained", desc: "Teaching communities to access reliable health information online and use digital health tools effectively." },
 ];
 
 const Projects = () => (
   <Layout>
-    <PageHero title="Our Projects" subtitle="See how we're making a difference across Ghana." image={hero1} />
+    <PageHero title="Our Projects" subtitle="See how we're making a health impact across Ghana." image={hero1} />
 
     {/* Ongoing */}
     <section className="section-padding">

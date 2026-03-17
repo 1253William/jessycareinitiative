@@ -38,10 +38,10 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-sm">JCF</span>
+            <span className="text-primary-foreground font-heading font-bold text-sm">JCI</span>
           </div>
           <span className="font-heading font-bold text-lg text-foreground hidden sm:block">
-            Jessy Care Foundation
+            JessyCare Impact Initiative
           </span>
         </Link>
 

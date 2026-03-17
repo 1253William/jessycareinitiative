@@ -5,34 +5,34 @@ import PageHero from "@/components/shared/PageHero";
 
 const events = [
   {
-    title: "Youth Empowerment Summit 2026",
+    title: "Community Health Awareness Summit 2026",
     date: "April 15, 2026",
     location: "Accra International Conference Centre",
-    desc: "A full-day summit bringing together young leaders, mentors, and industry experts to discuss pathways to success.",
+    desc: "A full-day summit bringing together health professionals, community leaders, and volunteers to discuss strategies for improving health outcomes in underserved areas.",
   },
   {
-    title: "Vocational Skills Open Day",
+    title: "Maternal & Child Health Open Day",
     date: "May 20, 2026",
-    location: "JCF Training Centre, Kumasi",
-    desc: "An open day showcasing our vocational training programs with live demonstrations and enrollment opportunities.",
+    location: "JCI Community Health Centre, Kumasi",
+    desc: "An open day showcasing our maternal and child health programs with free health screenings, educational workshops, and enrollment opportunities.",
   },
   {
-    title: "Community Education Drive",
+    title: "Rural Health Education Drive",
     date: "June 10, 2026",
     location: "Tamale, Northern Region",
-    desc: "A community outreach event providing free tutoring, educational materials, and scholarship information.",
+    desc: "A community outreach event providing free health education, basic screenings, and distributing health information materials to rural families.",
   },
   {
-    title: "Entrepreneurship Bootcamp",
+    title: "Health Advocacy & Volunteer Bootcamp",
     date: "July 5–7, 2026",
     location: "University of Ghana, Legon",
-    desc: "A three-day intensive bootcamp for aspiring entrepreneurs with workshops, pitch sessions, and mentorship.",
+    desc: "A three-day intensive bootcamp training volunteers and community health advocates in health education delivery, first aid, and outreach strategies.",
   },
 ];
 
 const Events = () => (
   <Layout>
-    <PageHero title="Events" subtitle="Stay updated with our upcoming events and activities." />
+    <PageHero title="Events" subtitle="Stay updated with our upcoming health outreach events and activities." />
 
     <section className="section-padding">
       <div className="container-narrow">

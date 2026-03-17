@@ -12,12 +12,12 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-sm">JCF</span>
+                <span className="text-primary-foreground font-heading font-bold text-sm">JCI</span>
               </div>
-              <span className="font-heading font-bold text-lg">Jessy Care Foundation</span>
+              <span className="font-heading font-bold text-lg">JessyCare Impact Initiative</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              Empowering young people through education, vocational training, entrepreneurship, and community development in Ghana and beyond.
+              Bridging gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships — creating lasting change and healthier futures for all.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-base mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-background/70">
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4" /> info@jessycarefoundation.org
+                <Mail className="w-4 h-4" /> info@jessycareimpact.org
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" /> +233 XX XXX XXXX
@@ -80,7 +80,7 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container-narrow px-4 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/60">
-            © {year} Jessy Care Foundation. All Rights Reserved.
+            © {year} JessyCare Impact Initiative. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             {[

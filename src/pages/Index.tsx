@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  GraduationCap, Lightbulb, Wrench, Users, Heart, Award, Star, ChevronRight,
+  Stethoscope, BookOpen, HeartHandshake, Users, Heart, Award, Star, ChevronRight,
   ChevronLeft, Plus, Minus, MapPin, ArrowRight
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
@@ -15,43 +15,43 @@ import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
 const heroSlides = [
-  { image: hero1, headline: "Support Our Mission", sub: "Your contribution helps us empower 100,000 young people in Ghana." },
-  { image: hero2, headline: "Educate. Empower. Transform.", sub: "Providing quality education and scholarships to underserved communities." },
-  { image: hero3, headline: "Building Skills, Building Futures", sub: "Vocational training that creates sustainable livelihoods." },
+  { image: hero1, headline: "Support Our Mission", sub: "Help us bridge the health gap in underserved communities through education, awareness, and access to care." },
+  { image: hero2, headline: "Educate. Empower. Heal.", sub: "Delivering life-changing health education and empowering communities with knowledge." },
+  { image: hero3, headline: "Healthier Communities, Brighter Futures", sub: "Sustainable health initiatives that uplift individuals and families — ensuring no one is left behind." },
 ];
 
 const metrics = [
-  { end: 500, suffix: "+", label: "Empowered Young People" },
-  { end: 30, suffix: "+", label: "Scholarships Awarded" },
-  { end: 100, suffix: "+", label: "Funded Educational Projects" },
-  { end: 50, suffix: "+", label: "Supported Entrepreneurial Ventures" },
+  { end: 500, suffix: "+", label: "Communities Reached" },
+  { end: 30, suffix: "+", label: "Health Programs Delivered" },
+  { end: 100, suffix: "+", label: "Outreach Campaigns" },
+  { end: 50, suffix: "+", label: "Partner Organizations" },
 ];
 
 const missionCards = [
-  { icon: GraduationCap, title: "Education", desc: "Providing scholarships and educational resources to students in need." },
-  { icon: Lightbulb, title: "Entrepreneurship", desc: "Mentoring young entrepreneurs to launch sustainable businesses." },
-  { icon: Wrench, title: "Vocational Skills", desc: "Hands-on training in practical trades for economic independence." },
-  { icon: Users, title: "Community Support", desc: "Strengthening communities through outreach and development." },
+  { icon: Stethoscope, title: "Health Education", desc: "Delivering accessible health knowledge to underserved communities." },
+  { icon: BookOpen, title: "Awareness Campaigns", desc: "Raising awareness on critical health issues through outreach programs." },
+  { icon: HeartHandshake, title: "Community Outreach", desc: "Reaching communities with life-changing health support and resources." },
+  { icon: Users, title: "Strategic Partnerships", desc: "Collaborating with organizations to maximize health impact." },
 ];
 
 const programmes = [
-  { title: "Vocational Training Initiative", summary: "Equipping youth with practical skills in carpentry, tailoring, and welding.", location: "Accra, Kumasi, Tamale", impact: "2,000+ trained" },
-  { title: "Entrepreneurship & Mentorship Workshop", summary: "Business training and mentorship for aspiring entrepreneurs.", location: "Greater Accra Region", impact: "100+ startups launched" },
-  { title: "Community Education Outreach", summary: "Bringing quality education to underserved communities.", location: "Northern Ghana", impact: "500+ students supported" },
+  { title: "Community Health Education Program", summary: "Bringing essential health knowledge to underserved cities and villages.", location: "Accra, Kumasi, Tamale", impact: "2,000+ educated" },
+  { title: "Health Awareness & Outreach Campaign", summary: "Empowering communities with practical health awareness and preventive care.", location: "Greater Accra Region", impact: "500+ families reached" },
+  { title: "Maternal & Child Health Initiative", summary: "Improving maternal and child health outcomes through education and support.", location: "Northern Ghana", impact: "300+ mothers supported" },
 ];
 
 const testimonials = [
-  { quote: "Jessy Care Foundation changed my life. Thanks to their scholarship I am now a university graduate.", author: "Kwame Mensah" },
-  { quote: "The vocational training center gave me the skills I needed to start my business.", author: "Abena Owusu" },
+  { quote: "JessyCare Impact Initiative opened my eyes to health practices that changed my family's life. We now have access to knowledge we never had before.", author: "Kwame Mensah" },
+  { quote: "The community health program brought awareness to our village. We learned about disease prevention and proper nutrition for our children.", author: "Abena Owusu" },
 ];
 
 const faqs = [
-  { q: "What is Jessy Care Foundation?", a: "Jessy Care Foundation is a non-governmental organization dedicated to empowering young people in Ghana through education, vocational training, entrepreneurship, and community development initiatives." },
-  { q: "How can I volunteer?", a: "You can volunteer by clicking the 'Volunteer With Us' button on our website and filling out the volunteer application form. We welcome volunteers from all backgrounds." },
-  { q: "How can I donate?", a: "Visit our Donate page where you can contribute via Mobile Money, bank transfer, or donate food and gift items directly." },
-  { q: "Where do donations go?", a: "100% of donations go directly to our programs — scholarships, vocational training, community education, and entrepreneurship initiatives." },
+  { q: "What is JessyCare Impact Initiative?", a: "JessyCare Impact Initiative is a purpose-driven organization working to bridge gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships, creating lasting change and healthier futures for all." },
+  { q: "How can I volunteer?", a: "You can volunteer by clicking the 'Volunteer With Us' button on our website and filling out the volunteer application form. We welcome volunteers from all backgrounds — especially those passionate about health and community service." },
+  { q: "How can I donate?", a: "Visit our Donate page where you can contribute via Mobile Money, bank transfer, or donate health supplies and essential items directly." },
+  { q: "Where do donations go?", a: "100% of donations go directly to our programs — health education campaigns, community outreach, maternal care initiatives, and awareness programs." },
   { q: "How can I track my donation?", a: "We provide regular impact reports and updates through our newsletter and social media channels so donors can see exactly how their contributions are making a difference." },
-  { q: "What impact has the foundation made?", a: "We have empowered over 500 young people, awarded 30+ scholarships, funded 100+ educational projects, and supported 50+ entrepreneurial ventures across Ghana." },
+  { q: "What impact has the initiative made?", a: "We have reached over 500 communities, delivered 30+ health programs, run 100+ outreach campaigns, and partnered with 50+ organizations to improve health outcomes across Ghana." },
 ];
 
 const Index = () => {
@@ -143,8 +143,8 @@ const Index = () => {
         <div className="container-narrow text-center">
           <SectionHeading
             label="Our Purpose"
-            title="Together, We Can Empower Generations"
-            description="Jessy Care Foundation is committed to empowering young people through education, vocational training, entrepreneurship, and community development initiatives."
+            title="Together, We Can Build Healthier Communities"
+            description="We are committed to transforming lives by improving access to health education and empowering communities with knowledge and sustainable support systems."
           />
         </div>
       </section>
@@ -167,8 +167,8 @@ const Index = () => {
         <div className="container-narrow">
           <SectionHeading
             label="Our Mission"
-            title="We Believe We Can Empower 100,000 Young Leaders by 2030"
-            description="Through targeted programs in education, skills training, and community development, we're building a generation of empowered African leaders."
+            title="Bridging the Health Gap in Underserved Communities"
+            description="Through targeted programs in health education, community outreach, and strategic partnerships, we're building healthier, more informed communities across Ghana."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {missionCards.map((card, i) => (
@@ -196,8 +196,8 @@ const Index = () => {
         <div className="container-narrow">
           <SectionHeading
             label="Our Programmes"
-            title="Making an Impact Across Ghana"
-            description="Our programs are designed to create lasting change through education and skills development."
+            title="Making a Health Impact Across Ghana"
+            description="Our programs are designed to create lasting change through health education, awareness, and community empowerment."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {programmes.map((prog, i) => (
@@ -244,7 +244,7 @@ const Index = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-10 text-left">
               {[
-                "Make a Tangible Impact",
+                "Make a Tangible Health Impact",
                 "Develop New Skills",
                 "Gain a Sense of Fulfillment",
                 "Support a Worthy Cause",

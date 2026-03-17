@@ -9,7 +9,7 @@ const methods = [
     icon: Smartphone,
     title: "Mobile Money",
     fields: [
-      { label: "Account Name", value: "Jessy Care Foundation" },
+      { label: "Account Name", value: "JessyCare Impact Initiative" },
       { label: "Account Number", value: "024 XXX XXXX" },
     ],
   },
@@ -25,14 +25,14 @@ const methods = [
   },
   {
     icon: Gift,
-    title: "Food & Gift Items",
-    items: ["Food supplies", "Educational materials", "Clothing donations"],
+    title: "Health Supplies & Essentials",
+    items: ["Medical supplies", "Health education materials", "Hygiene kits & essentials"],
   },
 ];
 
 const Donate = () => (
   <Layout>
-    <PageHero title="Join Us in Building a Legacy of Empowerment" subtitle="Every contribution, big or small, creates lasting change." />
+    <PageHero title="Join Us in Building Healthier Futures" subtitle="Every contribution, big or small, creates lasting change in communities." />
 
     {/* Why Donate */}
     <section className="section-padding">
@@ -45,9 +45,9 @@ const Donate = () => (
           className="text-center text-muted-foreground text-lg leading-relaxed space-y-4"
         >
           <p>
-            Your donation directly funds scholarships, vocational training programs, entrepreneurship workshops,
-            and community education initiatives. Every cedi contributed helps us move closer to our goal of
-            empowering 100,000 young leaders by 2030.
+            Your support helps us deliver essential health education, expand access to care, and empower
+            communities with life-saving knowledge. Every contribution directly impacts lives and builds
+            healthier futures for families across Ghana.
           </p>
         </motion.div>
       </div>
