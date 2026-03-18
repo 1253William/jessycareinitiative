@@ -38,10 +38,10 @@ const CountUpNumber = ({ end, suffix = "", label }: CountUpNumberProps) => {
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      <div className="text-4xl md:text-5xl font-bold gradient-text font-heading">
+      <div className="text-4xl md:text-5xl font-bold font-heading text-primary-foreground">
         {count.toLocaleString()}{suffix}
       </div>
-      <p className="mt-2 text-muted-foreground text-sm font-medium">{label}</p>
+      <p className="mt-2 text-primary-foreground/80 text-sm font-medium">{label}</p>
     </motion.div>
   );
 };

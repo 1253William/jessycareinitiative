@@ -43,6 +43,10 @@ const programmes = [
 const testimonials = [
   { quote: "JessyCare Impact Initiative opened my eyes to health practices that changed my family's life. We now have access to knowledge we never had before.", author: "Kwame Mensah" },
   { quote: "The community health program brought awareness to our village. We learned about disease prevention and proper nutrition for our children.", author: "Abena Owusu" },
+  { quote: "Thanks to JessyCare, our mothers now understand the importance of prenatal care. The maternal health initiative has been a blessing to our community.", author: "Esi Appiah" },
+  { quote: "The health screening outreach caught my condition early. I received treatment just in time. JessyCare truly saves lives.", author: "Kofi Adjei" },
+  { quote: "Our school now has a health education curriculum because of JessyCare. The children are learning hygiene and nutrition habits that will last a lifetime.", author: "Akua Darko" },
+  { quote: "As a volunteer, I witnessed firsthand how JessyCare transforms rural communities. Their dedication to health equity is unmatched.", author: "Yaw Boateng" },
 ];
 
 const faqs = [
