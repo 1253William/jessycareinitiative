@@ -71,6 +71,13 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTestIdx((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}
