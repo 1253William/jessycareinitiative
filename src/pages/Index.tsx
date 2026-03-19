@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Stethoscope, BookOpen, HeartHandshake, Users, Heart, Award, Star, ChevronRight,
-  ChevronLeft, Plus, Minus, MapPin, ArrowRight
+  ChevronLeft, Plus, Minus, MapPin, ArrowRight, Calendar
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/shared/SectionHeading";
@@ -13,6 +13,30 @@ import VolunteerModal from "@/components/shared/VolunteerModal";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
+import event1 from "@/assets/event-1.jpg";
+import event2 from "@/assets/event-2.jpg";
+import event3 from "@/assets/event-3.jpg";
+
+const recentEvents = [
+  {
+    title: "Community Health Education Program",
+    date: "March 10, 2026",
+    desc: "Bringing essential health knowledge to underserved villages — covering disease prevention, nutrition, and hygiene.",
+    image: event1,
+  },
+  {
+    title: "Maternal & Child Health Open Day",
+    date: "February 20, 2026",
+    desc: "An open day showcasing maternal and child health programs with free screenings and educational workshops.",
+    image: event2,
+  },
+  {
+    title: "Community Health Awareness Summit",
+    date: "January 15, 2026",
+    desc: "A full-day summit bringing together health professionals and community leaders to discuss health strategies.",
+    image: event3,
+  },
+];
 
 const heroSlides = [
   { image: hero1, headline: "Support Our Mission", sub: "Help us bridge the health gap in underserved communities through education, awareness, and access to care." },
@@ -274,6 +298,51 @@ const Index = () => {
               Volunteer Now
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Recent Events */}
+      <section className="section-padding">
+        <div className="container-narrow">
+          <SectionHeading
+            label="Recent Events"
+            title="Our Latest Outreach Activities"
+            description="See highlights from our most recent health outreach events and community programs."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recentEvents.map((event, i) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:card-shadow-hover transition-shadow duration-300 group"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                    <Calendar className="w-3.5 h-3.5 text-primary" /> {event.date}
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">{event.title}</h3>
+                  <p className="text-muted-foreground text-sm">{event.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/projects/events">
+              <Button variant="gradient" size="lg">
+                See More Events <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
