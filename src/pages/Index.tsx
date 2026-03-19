@@ -13,6 +13,30 @@ import VolunteerModal from "@/components/shared/VolunteerModal";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
+import event1 from "@/assets/event-1.jpg";
+import event2 from "@/assets/event-2.jpg";
+import event3 from "@/assets/event-3.jpg";
+
+const recentEvents = [
+  {
+    title: "Community Health Education Program",
+    date: "March 10, 2026",
+    desc: "Bringing essential health knowledge to underserved villages — covering disease prevention, nutrition, and hygiene.",
+    image: event1,
+  },
+  {
+    title: "Maternal & Child Health Open Day",
+    date: "February 20, 2026",
+    desc: "An open day showcasing maternal and child health programs with free screenings and educational workshops.",
+    image: event2,
+  },
+  {
+    title: "Community Health Awareness Summit",
+    date: "January 15, 2026",
+    desc: "A full-day summit bringing together health professionals and community leaders to discuss health strategies.",
+    image: event3,
+  },
+];
 
 const heroSlides = [
   { image: hero1, headline: "Support Our Mission", sub: "Help us bridge the health gap in underserved communities through education, awareness, and access to care." },
