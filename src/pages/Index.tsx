@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Stethoscope, BookOpen, HeartHandshake, Users, Heart, Award, Star, ChevronRight,
-  ChevronLeft, Plus, Minus, MapPin, ArrowRight
+  ChevronLeft, Plus, Minus, MapPin, ArrowRight, Calendar
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/shared/SectionHeading";
