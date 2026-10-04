@@ -24,11 +24,11 @@ export default function MediaLightbox({ items, index, onClose, onSelect }: { ite
       <Button variant="ghost" size="icon" className="absolute top-4 right-4 text-primary-foreground hover:text-primary" aria-label="Close viewer" onClick={onClose}><X /></Button>
       {item && <>
         <div className="flex items-center justify-center w-full max-w-6xl gap-2 md:gap-6">
-          <Button variant="ghost" size="icon" className="shrink-0 text-primary-foreground hover:text-primary" aria-label="Previous image" onClick={() => onSelect((active! - 1 + items.length) % items.length)}><ChevronLeft /></Button>
+          <Button variant="ghost" size="icon" className="shrink-0 text-primary-foreground hover:text-primary" aria-label="Previous image" onClick={() => onSelect((active - 1 + items.length) % items.length)}><ChevronLeft /></Button>
           {item.type === "video" ? <video key={item.id} src={item.src} poster={item.poster} className="max-w-[calc(100%-6rem)] max-h-[75dvh]" controls autoPlay playsInline preload="metadata" aria-label={item.alt} /> : <img src={item.src} alt={item.alt} className="max-w-[calc(100%-6rem)] max-h-[75dvh] object-contain" />}
-          <Button variant="ghost" size="icon" className="shrink-0 text-primary-foreground hover:text-primary" aria-label="Next image" onClick={() => onSelect((active! + 1) % items.length)}><ChevronRight /></Button>
+          <Button variant="ghost" size="icon" className="shrink-0 text-primary-foreground hover:text-primary" aria-label="Next image" onClick={() => onSelect((active + 1) % items.length)}><ChevronRight /></Button>
         </div>
-        <p className="mt-4 text-center text-sm">{item.caption || item.alt} · {active! + 1} / {items.length}</p>
+        <p className="mt-4 text-center text-sm">{item.caption || item.alt} · {active + 1} / {items.length}</p>
       </>}
     </DialogContent>
   </Dialog>;
