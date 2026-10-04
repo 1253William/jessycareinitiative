@@ -13,7 +13,7 @@ const events = [
   {
     title: "Maternal & Child Health Open Day",
     date: "May 20, 2026",
-    location: "JCI Community Health Centre, Kumasi",
+    location: "The Jessicare Initiative Community Health Centre, Kumasi",
     desc: "An open day showcasing our maternal and child health programs with free health screenings, educational workshops, and enrollment opportunities.",
   },
   {

@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
                 <span className="text-primary-foreground font-heading font-bold text-sm">JCI</span>
               </div>
-              <span className="font-heading font-bold text-lg">JessyCare Impact Initiative</span>
+              <span className="font-heading font-bold text-lg">The Jessicare Initiative</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
               Bridging gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships — creating lasting change and healthier futures for all.
@@ -80,7 +80,7 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container-narrow px-4 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/60">
-            © {year} JessyCare Impact Initiative. All Rights Reserved.
+            © {year} The Jessicare Initiative. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             {[

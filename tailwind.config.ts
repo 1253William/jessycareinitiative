@@ -18,6 +18,7 @@ export default {
         body: ["Inter", "sans-serif"],
       },
       colors: {
+        brand: { navy: "hsl(var(--brand-navy))", sky: "hsl(var(--brand-sky))", orange: "hsl(var(--brand-orange))" },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

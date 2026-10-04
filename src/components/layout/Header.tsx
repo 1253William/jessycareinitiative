@@ -41,7 +41,7 @@ const Header = () => {
             <span className="text-primary-foreground font-heading font-bold text-sm">JCI</span>
           </div>
           <span className="font-heading font-bold text-lg text-foreground hidden sm:block">
-            JessyCare Impact Initiative
+            The Jessicare Initiative
           </span>
         </Link>
 

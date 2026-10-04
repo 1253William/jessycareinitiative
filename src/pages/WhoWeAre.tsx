@@ -28,7 +28,7 @@ const WhoWeAre = () => (
           className="prose prose-lg max-w-none text-muted-foreground space-y-4"
         >
           <p>
-            JessyCare Impact Initiative is a purpose-driven organization focused on improving health outcomes
+            The Jessicare Initiative is a purpose-driven organization focused on improving health outcomes
             through education, awareness, and community-driven programs. We were founded with the belief that
             no one should be limited by lack of access to health knowledge or care.
           </p>
@@ -53,7 +53,7 @@ const WhoWeAre = () => (
           >
             <h3 className="font-heading text-2xl font-bold mb-4 gradient-text">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              At JessyCare Impact Initiative, we strive to bridge the health gap both in underserved cities and
+              At The Jessicare Initiative, we strive to bridge the health gap both in underserved cities and
               villages. We work to reach communities with life-changing health education, empowering practical
               awareness, and sustainable initiatives that uplift individuals and families — ensuring no one is left behind.
             </p>

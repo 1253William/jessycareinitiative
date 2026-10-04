@@ -9,18 +9,18 @@ const methods = [
     icon: Smartphone,
     title: "Mobile Money",
     fields: [
-      { label: "Account Name", value: "JessyCare Impact Initiative" },
-      { label: "Account Number", value: "024 XXX XXXX" },
+      { label: "Account Name", value: "The Jessicare Initiative" },
+      { label: "Account Number", value: "To be confirmed" },
     ],
   },
   {
     icon: Building2,
     title: "Bank Transfer",
     fields: [
-      { label: "Bank Name", value: "Ghana Commercial Bank" },
-      { label: "Account Number", value: "XXXXXXXXXXXXXXX" },
-      { label: "SWIFT Code", value: "GHCBGHAC" },
-      { label: "Branch", value: "Accra Main Branch" },
+      { label: "Bank Name", value: "To be confirmed" },
+      { label: "Account Number", value: "To be confirmed" },
+      { label: "SWIFT Code", value: "To be confirmed" },
+      { label: "Branch", value: "To be confirmed" },
     ],
   },
   {

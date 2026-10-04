@@ -65,16 +65,16 @@ const programmes = [
 ];
 
 const testimonials = [
-  { quote: "JessyCare Impact Initiative taught me how to care for my newborn properly. The maternal health program gave me confidence as a first-time mother.", author: "Adwoa Serwaa" },
+  { quote: "The Jessicare Initiative taught me how to care for my newborn properly. The maternal health program gave me confidence as a first-time mother.", author: "Adwoa Serwaa" },
   { quote: "The community health program brought awareness to our village. We learned about disease prevention and proper nutrition for our children.", author: "Abena Owusu" },
-  { quote: "Thanks to JessyCare, our mothers now understand the importance of prenatal care. The maternal health initiative has been a blessing to our community.", author: "Nana Ama Mensah" },
-  { quote: "The health screening outreach caught my condition early. I received treatment just in time. JessyCare truly saves lives.", author: "Fatima Ibrahim" },
-  { quote: "Our school now has a health education curriculum because of JessyCare. The children are learning hygiene and nutrition habits that will last a lifetime.", author: "Grace Tetteh" },
-  { quote: "As a community health volunteer, I have seen lives transformed. JessyCare's dedication to reaching underserved families is truly inspiring.", author: "Ama Konadu" },
+  { quote: "Thanks to The Jessicare Initiative, our mothers now understand the importance of prenatal care. The maternal health initiative has been a blessing to our community.", author: "Nana Ama Mensah" },
+  { quote: "The health screening outreach caught my condition early. I received treatment just in time. The Jessicare Initiative truly saves lives.", author: "Fatima Ibrahim" },
+  { quote: "Our school now has a health education curriculum because of The Jessicare Initiative. The children are learning hygiene and nutrition habits that will last a lifetime.", author: "Grace Tetteh" },
+  { quote: "As a community health volunteer, I have seen lives transformed. The Jessicare Initiative's dedication to reaching underserved families is truly inspiring.", author: "Ama Konadu" },
 ];
 
 const faqs = [
-  { q: "What is JessyCare Impact Initiative?", a: "JessyCare Impact Initiative is a purpose-driven organization working to bridge gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships, creating lasting change and healthier futures for all." },
+  { q: "What is The Jessicare Initiative?", a: "The Jessicare Initiative is a purpose-driven organization working to bridge gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships, creating lasting change and healthier futures for all." },
   { q: "How can I volunteer?", a: "You can volunteer by clicking the 'Volunteer With Us' button on our website and filling out the volunteer application form. We welcome volunteers from all backgrounds — especially those passionate about health and community service." },
   { q: "How can I donate?", a: "Visit our Donate page where you can contribute via Mobile Money, bank transfer, or donate health supplies and essential items directly." },
   { q: "Where do donations go?", a: "100% of donations go directly to our programs — health education campaigns, community outreach, maternal care initiatives, and awareness programs." },
@@ -105,7 +105,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative min-h-[min(760px,85vh)] overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -146,7 +146,7 @@ const Index = () => {
                   </Button>
                 </Link>
                 <Button
-                  variant="gradient-outline"
+                  variant="outline"
                   size="lg"
                   className="text-base px-8 border-background text-background hover:bg-background hover:text-foreground"
                   onClick={() => setVolModalOpen(true)}
@@ -337,7 +337,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/projects/events">
+            <Link to="/events">
               <Button variant="gradient" size="lg">
                 See More Events <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
