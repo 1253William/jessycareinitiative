@@ -65,3 +65,5 @@
 html {
   scroll-behavior: smooth;
 }
+.gallery-frame { padding: 24px; border-radius: var(--radius); background-color: hsl(var(--primary)); background-image: radial-gradient(hsl(var(--secondary) / 0.25) 1.5px, transparent 1.5px); background-size: 10px 10px; box-shadow: 0 0 35px hsl(var(--secondary) / 0.15); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
