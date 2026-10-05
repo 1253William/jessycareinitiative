@@ -18,7 +18,7 @@ The build includes a crawlable sitemap and organization structured data. Vercel 
 
 - Gallery: the supplied 2025 Health Awareness & Free Health Outreach photos are included from Cloudinary in `src/data/gallery.ts`. Add future verified photos and videos there as they become available.
 - Events: update event dates, venue, registration link, descriptions, and imagery in `src/data/events.ts` when confirmed. The November 2026 venue and programme details are still to be confirmed.
-- Contact: the public email is `thejessicareinitiative@gmail.com` and the phone is `+233 (0) 55 753 4146`. Add verified street address and social URLs when available.
+- Contact: the public email is `thejessicareinitiative@gmail.com` and the phone is `+233 (0) 55 319 8062`. Add verified street address and social URLs when available.
 - Donate: supply verified bank and mobile money account details before inviting payments.
 - Testimonials and impact figures on the existing site should be verified with the organization before publication.
 
