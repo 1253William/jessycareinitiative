@@ -15,14 +15,20 @@ interface VolunteerModalProps {
 const VolunteerModal = ({ open, onOpenChange, title = "Volunteer With Us" }: VolunteerModalProps) => {
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const endpoint = import.meta.env.VITE_BASIN_ENDPOINT;
+    if (!endpoint) { toast.error("Applications are not available yet. Please use the Contact page."); return; }
+    const form = new FormData(e.currentTarget);
+    form.append("subject", title.includes("Partner") ? "Partnership" : "Volunteer");
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch(endpoint, { method: "POST", body: form, headers: { Accept: "application/json" } });
+      if (!response.ok) throw new Error("Submission failed");
       onOpenChange(false);
-      toast.success("Thank you! We'll be in touch soon.");
-    }, 1000);
+      toast.success("Thank you — we've received your application.");
+    } catch { toast.error("Something went wrong. Please try again later."); }
+    finally { setLoading(false); }
   };
 
   return (
@@ -34,19 +40,19 @@ const VolunteerModal = ({ open, onOpenChange, title = "Volunteer With Us" }: Vol
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <Label htmlFor="vol-name">Full Name</Label>
-            <Input id="vol-name" placeholder="Your name" required />
+            <Input id="vol-name" name="name" placeholder="Your name" required />
           </div>
           <div>
             <Label htmlFor="vol-email">Email</Label>
-            <Input id="vol-email" type="email" placeholder="you@example.com" required />
+            <Input id="vol-email" name="email" type="email" placeholder="you@example.com" required />
           </div>
           <div>
             <Label htmlFor="vol-phone">Phone</Label>
-            <Input id="vol-phone" placeholder="+233 XX XXX XXXX" />
+            <Input id="vol-phone" name="phone" placeholder="+233 XX XXX XXXX" />
           </div>
           <div>
             <Label htmlFor="vol-message">Why do you want to volunteer?</Label>
-            <Textarea id="vol-message" placeholder="Tell us about yourself..." rows={3} />
+            <Textarea id="vol-message" name="message" placeholder="Tell us about yourself..." rows={3} />
           </div>
           <Button type="submit" variant="gradient" className="w-full" disabled={loading}>
             {loading ? "Submitting..." : "Submit Application"}

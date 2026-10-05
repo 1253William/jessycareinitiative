@@ -1,73 +1,17 @@
-# Welcome to your Lovable project
+# The Jessicare Initiative
 
-## Project info
+A static-exportable React + Vite website for community health education and outreach. Build with `npm install && npm run build`; the static files are generated in `dist/` and require a host that falls back to `index.html` for client-side routes.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Contact form
 
-## How can I edit this code?
+Create a Basin form at usebasin.com, then set `VITE_BASIN_ENDPOINT` to the form URL (`https://usebasin.com/f/...`) in the deployment environment. `.env.example` shows the required variable. Contact, volunteer, and partnership submissions all use this endpoint. Without it the forms cannot send.
 
-There are several ways of editing your application.
+## Content to replace before publishing
 
-**Use Lovable**
+- Gallery: add verified photos under `public/assets/gallery/` and videos under `public/assets/gallery/videos/`, then add records in `src/data/gallery.ts`. Current gallery photos are the existing project imagery; no videos have been supplied.
+- Events: update placeholder dates, venue, registration link, descriptions, and imagery in `src/data/events.ts` when confirmed. The November 2026 and 2025 entries are placeholders.
+- Contact: supply the real email, phone, street address, and social URLs; placeholders are visible on the contact page and footer.
+- Donate: supply verified bank and mobile money account details before inviting payments.
+- Testimonials and impact figures on the existing site should be verified with the organization before publication.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Public routes include `/`, `/about/who-we-are`, `/about/what-we-do`, `/projects`, `/projects/gallery`, `/events`, `/events/:slug`, `/donate`, `/contact`, and the legacy `/projects/events` alias.
