@@ -14,7 +14,7 @@ const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
         <div className="absolute inset-0 bg-foreground/70" />
       </>
     )}
-    {!image && <div className="absolute inset-0 gradient-hero-bg opacity-90" />}
+    {!image && <div className="absolute inset-0 bg-primary opacity-90" />}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}

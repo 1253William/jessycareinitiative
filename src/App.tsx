@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,15 +13,36 @@ import Gallery from "./pages/Gallery";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { events } from "./data/events";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const siteUrl = "https://jessycareimpactinitiative.lovable.app";
+const titles: Record<string, [string,string]> = {
+  "/": ["Home", "Community health education, care, and outreach across Ghana."],
+  "/about/who-we-are": ["Who We Are", "Discover the mission, vision, and values of The Jessicare Initiative."],
+  "/about/what-we-do": ["What We Do", "Explore health education, awareness, and outreach programmes in Ghana."],
+  "/projects": ["Our Projects", "Explore community health projects and outreach across Ghana."],
+  "/projects/gallery": ["Gallery", "Moments from the field: community care, education, and outreach."],
+  "/events": ["Events", "Join The Jessicare Initiative at community health events."],
+  "/projects/events": ["Events", "Join The Jessicare Initiative at community health events."],
+  "/donate": ["Donate", "Support health education and access to care in underserved communities."],
+  "/contact": ["Contact", "Get in touch with The Jessicare Initiative."],
+};
+function PageMeta() {
+  const {pathname} = useLocation();
+  const detail=events.find(event => pathname === `/events/${event.slug}`);
+  const [title,description]=detail ? [detail.title,detail.summary] : titles[pathname] || ["Page not found", "The Jessicare Initiative"];
+  return <Helmet><title>{`${title} | The Jessicare Initiative`}</title><meta name="description" content={description} /><link rel="canonical" href={`${siteUrl}${pathname}`} /><meta property="og:title" content={`${title} | The Jessicare Initiative`} /><meta property="og:description" content={description} /><meta property="og:url" content={`${siteUrl}${pathname}`} /></Helmet>;
+}
+const App = () => (<HelmetProvider>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageMeta />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about/who-we-are" element={<WhoWeAre />} />
@@ -37,7 +58,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
+  </QueryClientProvider></HelmetProvider>
 );
 
 export default App;

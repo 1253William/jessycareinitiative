@@ -19,7 +19,7 @@ const SectionHeading = ({ label, title, description, className, center = true, g
     className={cn("mb-12 md:mb-16", center && "text-center", className)}
   >
     {label && (
-      <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase gradient-bg text-primary-foreground mb-4">
+      <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent text-accent-foreground mb-4">
         {label}
       </span>
     )}
