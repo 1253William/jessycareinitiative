@@ -3,11 +3,12 @@ import { motion, useInView } from "framer-motion";
 
 interface CountUpNumberProps {
   end: number;
+  prefix?: string;
   suffix?: string;
   label: string;
 }
 
-const CountUpNumber = ({ end, suffix = "", label }: CountUpNumberProps) => {
+const CountUpNumber = ({ end, prefix = "", suffix = "", label }: CountUpNumberProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [count, setCount] = useState(0);
@@ -39,7 +40,7 @@ const CountUpNumber = ({ end, suffix = "", label }: CountUpNumberProps) => {
       className="text-center"
     >
       <div className="text-4xl md:text-5xl font-bold font-heading text-primary-foreground">
-        {count.toLocaleString()}{suffix}
+        {prefix}{count.toLocaleString()}{suffix}
       </div>
       <p className="mt-2 text-primary-foreground/80 text-sm font-medium">{label}</p>
     </motion.div>

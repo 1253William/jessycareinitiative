@@ -14,7 +14,7 @@ const areas = [
   {
     icon: Megaphone,
     title: "Awareness Campaigns",
-    desc: "Through targeted outreach campaigns, we raise awareness on critical health issues including malaria prevention, reproductive health, mental wellness, and childhood vaccination. We reach thousands through community events and media.",
+    desc: "Through targeted outreach, we raise awareness on critical health issues including malaria prevention, reproductive health, mental wellness, and childhood vaccination. We share practical information through community engagement and media.",
   },
   {
     icon: HeartHandshake,

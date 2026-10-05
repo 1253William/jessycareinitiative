@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  Stethoscope, BookOpen, HeartHandshake, Users, Heart, Star, ChevronRight,
-  ChevronLeft, Plus, Minus, MapPin, ArrowRight, Calendar
+  Stethoscope, BookOpen, HeartHandshake, Users, Heart, ChevronRight,
+  ChevronLeft, Plus, Minus, ArrowRight, Calendar
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/shared/SectionHeading";
@@ -17,24 +17,29 @@ import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 import event3 from "@/assets/event-3.jpg";
 
+//Images from cloudinary to replace recent events images
+const cloudinaryEvent1 = "https://res.cloudinary.com/dfmsaarli/image/upload/v1791194966/PHOTO-2025-11-18-19-49-14_rkmmqq.jpg";
+const cloudinaryEvent2 = "https://res.cloudinary.com/dfmsaarli/image/upload/v1791194965/PHOTO-2025-11-18-19-55-16_scczyh.jpg";
+const cloudinaryEvent3 = "https://res.cloudinary.com/dfmsaarli/image/upload/v1791194965/PHOTO-2025-11-18-19-58-43_qw0ntg.jpg";
+
 const recentEvents = [
   {
     title: "Community Health Education Program",
-    date: "March 10, 2026",
+    date: "November 18, 2025",
     desc: "Bringing essential health knowledge to underserved villages — covering disease prevention, nutrition, and hygiene.",
-    image: event1,
+    image: cloudinaryEvent1,
   },
   {
     title: "Maternal & Child Health Open Day",
-    date: "February 20, 2026",
+    date: "November 18, 2025",
     desc: "An open day showcasing maternal and child health programs with free screenings and educational workshops.",
-    image: event2,
+    image: cloudinaryEvent2,
   },
   {
     title: "Community Health Awareness Summit",
-    date: "January 15, 2026",
+    date: "November 18, 2025",
     desc: "A full-day summit bringing together health professionals and community leaders to discuss health strategies.",
-    image: event3,
+    image: cloudinaryEvent3,
   },
 ];
 
@@ -45,10 +50,10 @@ const heroSlides = [
 ];
 
 const metrics = [
-  { end: 500, suffix: "+", label: "Communities Reached" },
+  { end: 100, prefix: "~", label: "Community members at 2025 outreach" },
   { end: 30, suffix: "+", label: "Health Programs Delivered" },
   { end: 100, suffix: "+", label: "Outreach Campaigns" },
-  { end: 50, suffix: "+", label: "Partner Organizations" },
+  { end: 5, suffix: "+", label: "Partner Organizations" },
 ];
 
 const missionCards = [
@@ -58,11 +63,20 @@ const missionCards = [
   { icon: Users, title: "Strategic Partnerships", desc: "Collaborating with organizations to maximize health impact." },
 ];
 
-const programmes = [
-  { title: "Community Health Education Program", summary: "Bringing essential health knowledge to underserved cities and villages.", location: "Accra, Kumasi, Tamale", impact: "2,000+ educated" },
-  { title: "Health Awareness & Outreach Campaign", summary: "Empowering communities with practical health awareness and preventive care.", location: "Greater Accra Region", impact: "500+ families reached" },
-  { title: "Maternal & Child Health Initiative", summary: "Improving maternal and child health outcomes through education and support.", location: "Northern Ghana", impact: "300+ mothers supported" },
-];
+const programme = {
+  title: "Community Health Education & Awareness Outreach",
+  summary: "One connected initiative bringing practical health education and community outreach together.",
+  focusAreas: [
+    {
+      title: "Community Health Education Program",
+      summary: "Accessible, practical health education to help individuals and families make informed decisions about prevention and wellbeing.",
+    },
+    {
+      title: "Health Awareness & Outreach Campaign",
+      summary: "Community-centered outreach that shares important health information and helps people connect with appropriate care.",
+    },
+  ],
+};
 
 const testimonials = [
   { quote: "The Jessicare Initiative taught me how to care for my newborn properly. The maternal health program gave me confidence as a first-time mother.", author: "Adwoa Serwaa" },
@@ -76,15 +90,17 @@ const testimonials = [
 const faqs = [
   { q: "What is The Jessicare Initiative?", a: "The Jessicare Initiative is a purpose-driven organization working to bridge gaps in health education and accessibility through impactful programs, community outreach, and strategic partnerships, creating lasting change and healthier futures for all." },
   { q: "How can I volunteer?", a: "You can volunteer by clicking the 'Volunteer With Us' button on our website and filling out the volunteer application form. We welcome volunteers from all backgrounds — especially those passionate about health and community service." },
-  { q: "How can I donate?", a: "Visit our Donate page where you can contribute via Mobile Money, bank transfer, or donate health supplies and essential items directly." },
-  { q: "Where do donations go?", a: "100% of donations go directly to our programs — health education campaigns, community outreach, maternal care initiatives, and awareness programs." },
-  { q: "How can I track my donation?", a: "We provide regular impact reports and updates through our newsletter and social media channels so donors can see exactly how their contributions are making a difference." },
-  { q: "What impact has the initiative made?", a: "We have reached over 500 communities, delivered 30+ health programs, run 100+ outreach campaigns, and partnered with 50+ organizations to improve health outcomes across Ghana." },
+  // { q: "How can I donate?", a: "Visit our Donate page where you can contribute via Mobile Money, bank transfer, or donate health supplies and essential items directly." },
+  // Donation FAQs stay hidden while the donation page is unavailable.
+  // { q: "Where do donations go?", a: "100% of donations go directly to our programs — health education campaigns, community outreach, maternal care initiatives, and awareness programs." },
+  // { q: "How can I track my donation?", a: "We provide regular impact reports and updates through our newsletter and social media channels so donors can see exactly how their contributions are making a difference." },
+  { q: "What impact has the initiative made?", a: "The 2025 Health Awareness & Free Health Outreach welcomed approximately 100 community members. The initiative also reports delivering 30+ health programs, conducting 100+ outreach campaigns, and working with 5+ partner organizations." },
 ];
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [volModalOpen, setVolModalOpen] = useState(false);
+  const [partnerModalOpen, setPartnerModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [testIdx, setTestIdx] = useState(0);
 
@@ -105,7 +121,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[min(760px,85vh)] overflow-hidden">
+      <section className="relative flex min-h-[min(760px,85vh)] items-center justify-center overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -124,14 +140,14 @@ const Index = () => {
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative z-10 h-full flex items-center">
+        <div className="relative z-10 w-full">
           <div className="container-narrow px-4 md:px-8">
             <motion.div
               key={`text-${currentSlide}`}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="max-w-2xl"
+              className="mx-auto max-w-4xl text-center"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight">
                 {heroSlides[currentSlide].headline}
@@ -139,16 +155,14 @@ const Index = () => {
               <p className="mt-4 text-lg md:text-xl text-background/80 leading-relaxed">
                 {heroSlides[currentSlide].sub}
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/donate">
-                  <Button variant="gradient" size="lg" className="text-base px-8">
-                    Donate To Us
-                  </Button>
-                </Link>
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <Button variant="gradient" size="lg" className="text-base px-8" onClick={() => setPartnerModalOpen(true)}>
+                  Partner with Us
+                </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-base px-8 border-background text-background hover:bg-background hover:text-foreground"
+                  className="border-background bg-background px-8 text-base text-primary hover:bg-background/90 hover:text-primary"
                   onClick={() => setVolModalOpen(true)}
                 >
                   Volunteer With Us
@@ -181,19 +195,6 @@ const Index = () => {
             title="Together, We Can Build Healthier Communities"
             description="We are committed to transforming lives by improving access to health education and empowering communities with knowledge and sustainable support systems."
           />
-        </div>
-      </section>
-
-      {/* Impact Metrics */}
-      <section className="py-16 gradient-hero-bg">
-        <div className="container-narrow px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((m) => (
-              <div key={m.label} className="text-center">
-                <CountUpNumber end={m.end} suffix={m.suffix} label={m.label} />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -230,37 +231,57 @@ const Index = () => {
       <section className="section-padding">
         <div className="container-narrow">
           <SectionHeading
-            label="Our Programmes"
-            title="Making a Health Impact Across Ghana"
-            description="Our programs are designed to create lasting change through health education, awareness, and community empowerment."
+            label="Our Programme"
+            title="Community Health Education & Awareness Outreach"
+            description="One connected initiative bringing practical health education and community outreach together."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {programmes.map((prog, i) => (
-              <motion.div
-                key={prog.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-6 hover:card-shadow-hover transition-all duration-300 group"
-              >
-                <h3 className="font-heading font-semibold text-lg mb-3">{prog.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{prog.summary}</p>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                  <MapPin className="w-3.5 h-3.5" /> {prog.location}
+          <motion.article
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] md:p-9"
+          >
+            <h3 className="font-heading text-xl font-semibold md:text-2xl">{programme.title}</h3>
+            <p className="mt-3 text-muted-foreground">{programme.summary}</p>
+            <div className="mt-6 grid gap-5 md:grid-cols-2">
+              {programme.focusAreas.map((area) => (
+                <div key={area.title} className="rounded-xl bg-muted p-5">
+                  <h4 className="font-heading font-semibold">{area.title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{area.summary}</p>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-primary">
-                  <Star className="w-3.5 h-3.5" /> {prog.impact}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.article>
           <div className="text-center mt-10">
             <Link to="/projects">
               <Button variant="gradient" size="lg">
                 View Projects <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Metrics */}
+      <section className="py-16 gradient-hero-bg">
+        <div className="container-narrow px-4 md:px-8">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-secondary">Our Impact</p>
+            <h2 className="mt-2 text-2xl font-bold text-primary-foreground md:text-3xl">A snapshot of our reach and work</h2>
+            <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+              Community attendance is approximate for the 2025 outreach. Other totals are initiative-reported.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-x-5 gap-y-9 md:grid-cols-4 md:gap-8">
+            {metrics.map((metric) => (
+              <CountUpNumber
+                key={metric.label}
+                end={metric.end}
+                prefix={metric.prefix}
+                suffix={metric.suffix}
+                label={metric.label}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -429,6 +450,7 @@ const Index = () => {
       </section>
 
       <VolunteerModal open={volModalOpen} onOpenChange={setVolModalOpen} />
+      <VolunteerModal open={partnerModalOpen} onOpenChange={setPartnerModalOpen} title="Partnership Inquiry" />
     </Layout>
   );
 };

@@ -34,8 +34,8 @@ const WhoWeAre = () => (
           </p>
           <p>
             Our journey began in communities where we witnessed firsthand the devastating effects of health
-            misinformation and limited access to care. Today, we operate across multiple regions in Ghana,
-            reaching hundreds of families through comprehensive health education and outreach programs.
+            misinformation and limited access to care. Today, we work alongside communities in Ghana through
+            health education, awareness, and outreach.
           </p>
         </motion.div>
       </div>

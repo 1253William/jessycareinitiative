@@ -1,10 +1,11 @@
 import event1 from "@/assets/event-1.jpg";
-import event2 from "@/assets/event-2.jpg";
+import { outreach2025Gallery } from "./gallery";
+import type { GalleryItem } from "./gallery";
 
 export type CommunityEvent = {
   id: string; slug: string; title: string; startDate: string; endDate?: string;
   location: string; summary: string; description: string; coverImage: string;
-  gallery?: string[]; registrationUrl?: string; status?: string;
+  gallery?: GalleryItem[]; registrationUrl?: string; status?: string;
 };
 
 export const events: CommunityEvent[] = [
@@ -17,11 +18,12 @@ export const events: CommunityEvent[] = [
     coverImage: event1,
   },
   {
-    id: "annual-2025", slug: "annual-outreach-2025", title: "Annual Outreach 2025",
-    startDate: "2025-11-15", location: "Ghana (venue to be confirmed)",
-    summary: "A look back at community outreach and health education in 2025. Event details to be confirmed.",
-    description: "Highlights and verified details from this past event will be added when available.",
-    coverImage: event2, gallery: [event2],
+    id: "annual-2025", slug: "annual-outreach-2025", title: "2025 Health Awareness & Free Health Outreach",
+    startDate: "2025-11-18", location: "Ghana",
+    summary: "A community health outreach bringing practical health awareness and free outreach closer to the people it serves.",
+    description: "The 2025 Health Awareness & Free Health Outreach brought community members and local health volunteers together around a shared goal: making useful health information and outreach more accessible. Through personal conversations, community engagement, and practical health support, the initiative created space for people to learn, ask questions, and connect with care. The experience reflects Jessicare's commitment to working alongside communities and partners to support healthier futures.",
+    coverImage: outreach2025Gallery[0].src,
+    gallery: outreach2025Gallery,
   },
 ];
 
